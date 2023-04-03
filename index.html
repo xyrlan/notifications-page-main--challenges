@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="tailwind.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;1,800&display=swap" rel="stylesheet">
+  <script defer src="js/index.js"></script>
+  
+  <title class="hidden">Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="font-jakarta bg-[#E5EFFA]">
+  <main class="content flex justify-center content-center">
+    <div class="max-sm:h-full max-sm:w-full h-[80%] w-[43%] p-4 bg-white sm:my-10 sm:rounded-xl sm:p-7">
+      <header class="flex justify-between mb-6">
+         <h1 class="font-extrabold text-xl flex">Notifications 
+          <div class=" rounded-lg mx-3 w-8 bg-[#0A317B] text-center text-lg text-white">
+            <p id="notificationsNumber"></p>
+          </div>
+        </h1>  
+        <button id="allreaded" class=" text-sm text-[#5E6778] hover:text-[#0A317B]">
+          Mark all as read
+        </button>
+      </header>
+      <div class=" flex flex-col justify-between h-full w-full text-sm space-y-3">
+
+
+        <div id="isso" class="inline-flex rounded-lg bg-light-blue text-[#5E6778]">
+          <img class="scale-50" src="assets/images/avatar-mark-webber.webp" rel="markwebber">
+          <div id="unreaded" class="bg-red-500 rounded-full h-2 w-2 absolute m-3"></div>
+          
+          <div class="flex flex-col justify-center relative">
+            
+            <p class="clear-both">
+            
+              <strong class="text-black hover:text-[#0A317B] cursor-pointer duration-300">Mark Webber</strong> 
+              reacted to your recent post 
+              <strong class=" hover:text-[#0A317B] cursor-pointer duration-300">My first tournament today!</strong>
+            
+            </p>
+            
+            <a class="text-[#939DAE]">1m ago</a>
+          
+          </div>
+        </div>
+
+        
+        <div id="isso2" class="inline-flex rounded-lg bg-light-blue text-[#5E6778]">
+          <img class="scale-50" src="assets/images/avatar-angela-gray.webp" rel="angela">
+          <div id="unreaded2" class="bg-red-500 rounded-full h-2 w-2 absolute m-3"></div>
+          <div class=" flex flex-col justify-center">
+            <p class=""><strong class="text-black hover:text-[#0A317B] cursor-pointer duration-300">Angela Gray </strong> followed you </p>
+            <a class="text-[#939DAE]">5m ago</a>
+          </div>
+        </div>
+
+
+        <div id="isso3" class="inline-flex rounded-lg bg-light-blue text-[#5E6778]">
+          <img class="scale-50" src="assets/images/avatar-jacob-thompson.webp" rel="jacob">
+          <div id="unreaded3" class="bg-red-500 rounded-full h-2 w-2 absolute m-3"></div>
+          <div class="flex flex-col justify-center">
+            <p><strong class="text-black hover:text-[#0A317B] cursor-pointer duration-300">Jacob Thompson</strong> has joined your group <strong class="text-[#0A317B] cursor-pointer">Chess Club</strong></p>
+            <a class="text-[#939DAE]">1 day ago</a>
+          </div>
+        </div>
+
+
+        <div id="isso4" class="rounded-lg text-[#5E6778] bg-light-blue">
+        <div class="inline-flex">
+          <img class="scale-50" src="assets/images/avatar-rizky-hasanuddin.webp" rel="rikzy">
+          <div id="unreaded4" class="bg-red-500 rounded-full h-2 w-2 absolute m-3"></div>
+          <div class="flex flex-col justify-center">
+            <p><strong class="text-black hover:text-[#0A317B] cursor-pointer duration-300">Rizky Hasanuddin</strong> sent you a private message</p>
+            <a class="text-[#939DAE]">5 days ago</a>
+          </div>
+         </div> 
+          <div class="ml-[90px] rounded-lg border border-gray-400 m-1">
+          <p class="p-4 hover:bg-[#E5EFFA] duration-300 cursor-pointer">
+            Hello, thanks for setting up the Chess Club. I've been a member for a few   weeks now and 
+            I'm already having lots of fun and improving my game.
+          </p>
+          </div>
+        </div>
+
+
+        <div id="isso5" class="inline-flex rounded-lg text-[#5E6778] bg-light-blue">
+          <img class="scale-50" src="assets/images/avatar-kimberly-smith.webp" rel="kimberly">
+          <div id="unreaded5" class="bg-red-500 rounded-full h-2 w-2 absolute m-3"></div>
+          <div class="flex flex-col justify-center">
+            <p><strong class="text-black hover:text-[#0A317B] cursor-pointer duration-300">Kimberly Smith</strong> commented on your picture</p>
+            <a class="text-[#939DAE]">1 week ago</a>
+          </div>
+          <img class="scale-50 cursor-pointer" src="assets/images/image-chess.webp" rel="chess">
+        </div>
+
+
+        <div id="isso6" class="inline-flex rounded-lg text-[#5E6778] bg-light-blue">
+          <img class="scale-50" src="assets/images/avatar-nathan-peterson.webp" rel="nathan">
+          <div id="unreaded6" class="bg-red-500 rounded-full h-2 w-2 absolute m-3"></div>
+          <div class="flex flex-col justify-center">
+            <p><strong class="text-black hover:text-[#0A317B] cursor-pointer duration-300">Nathan Peterson</strong> reacted to your recent post <strong class="hover:text-[#0A317B] cursor-pointer duration-300">5 end-game strategies to  increase your win rate</strong></p>
+            <a class="text-[#939DAE]">2 weeks ago</a>
+          </div>
+        </div>
+
+
+        <div id="isso7" class="inline-flex rounded-lg text-[#5E6778] bg-light-blue">
+          <img class="scale-50" src="assets/images/avatar-anna-kim.webp" rel="anna">
+          <div id="unreaded7" class="bg-red-500 rounded-full h-2 w-2 absolute m-3"></div>
+          <div class="flex flex-col justify-center">
+            <p><strong class=" text-black hover:text-[#0A317B] cursor-pointer duration-300">Anna Kim</strong> left the group <strong class="text-[#0A317B] cursor-pointer">Chess Club</strong></p>
+            <a class="text-[#939DAE]">2 weeks ago</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution max-sm:hidden">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/xyrlan">Xyrlan</a>.
+  </div>
+</body>
+</html>
